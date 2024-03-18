@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="project.css">
+</head>
+ 
+<body>
+    <!-- Navbar section -->
+    <navbar id="Navbar">
+        <img src="./image/A logo.png" alt="" id="logo">
+        <ul>
+            <li><a href="project.html">Home</a> </li>
+            <li><a href="proupcoming.html">Upcoming</a> </li>
+ 
+            <div id="categories">
+                <li><a href="#">Genre </a></li>
+            </div>
+            <li><a href="projectcontact.html">Contact</a></li>
+        </ul>
+        <div id="other-opt">
+            <div class="search">
+                <input type="search" name="search" id="search" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+            <button id="signIn">Sign in</button>
+        </div>
+        <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn">
+    </navbar>
+ 
+    <nav id="Other-Navbar">
+        <ul>
+            <li><a href="#">Home</a> </li>
+            <li><a href="#">About</a> </li>
+ 
+            <div id="categories">
+                <li><a href="#">Categories</i></a></li>
+            </div>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="Othersearch" style="margin: auto;">
+            <input type="search" name="search" id="Othersearch" placeholder="Search...">
+            <i class="fas fa-search"></i>
+        </div>
+    </nav>
+    <title>Anime Genres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0c2a;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #0b0c2a;
+            border-radius: 5px;
+            box-shadow: 0 0 10px white;
+        }
+        h2 {
+            color: grey;
+        }
+        .genre-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .genre-list li {
+            margin-bottom: 10px;
+            width: calc(33.33% - 10px); /* Three items per row */
+        }
+        .genre-list a {
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .genre-list a:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Anime Genres</h2>
+    <ul class="genre-list">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Adventure</a></li>
+        <li><a href="#">Comedy</a></li>
+        <li><a href="#">Drama</a></li>
+        <li><a href="#">Fantasy</a></li>
+        <li><a href="#">Horror</a></li>
+        <li><a href="#">Mystery</a></li>
+        <li><a href="#">Romance</a></li>
+        <li><a href="#">Sci-Fi</a></li>
+        <li><a href="#">Slice of Life</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Supernatural</a></li>
+    </ul>
+</div>
+
+</body>
+</html>

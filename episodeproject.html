@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="project.css">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0c2a;
+            text-align: center; /* Center content horizontally */
+        }
+        /* Your additional CSS styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto; /* Center container */
+            padding: 20px;
+        }
+        .episode-list ul {
+            padding: 0;
+            list-style: none; /* Remove bullet points */
+            display: flex;
+            flex-wrap: wrap; /* Allow episodes to wrap to next line */
+            justify-content: center; /* Center buttons horizontally */
+        }
+        .episode-list li {
+            margin: 5px;
+        }
+        .episode-list button {
+            border: none;
+            background: none;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 5px 10px; /* Add padding to buttons */
+        }
+        .episode-list button:hover {
+            color: red; /* Change text color to red on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar section -->
+    <nav id="Navbar">
+        <img src="./image/A logo.png" alt="" id="logo">
+        <ul>
+            <li><a href="project.html">Home</a> </li>
+            <li><a href="proupcoming.html">Upcoming</a> </li>
+ 
+            <div id="categories">
+                <li><a href="progenre.html">Genre </a></li>
+            </div>
+            <li><a href="projectcontact.html">Contact</a></li>
+        </ul>
+        <div id="other-opt">
+            <div class="search">
+                <input type="search" name="search" id="search" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+            <button id="signIn">Sign in</button>
+        </div>
+        <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn">
+    </nav>
+ 
+    <nav id="Other-Navbar">
+        <ul>
+            <li><a href="#">Home</a> </li>
+            <li><a href="#">About</a> </li>
+ 
+            <div id="categories">
+                <li><a href="#">Categories <i class="fas fa-caret-down"></i></a></li>
+            </div>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="Othersearch" style="margin: auto;">
+            <input type="search" name="search" id="Othersearch" placeholder="Search...">
+            <i class="fas fa-search"></i>
+        </div>
+    </nav>
+ 
+    <div class="container">
+        <video controls>
+            <iframe width="420" height="315" src="https://youtu.be/Opr5daXls8g?si=_egidpVkTDBsDMUk" allowfullscreen></iframe>
+    
+            Your browser does not support the video tag.
+        </video>
+    
+        <div class="episode-list">
+            <h2>Episode List</h2>
+            <ul>
+                <li><button onclick="selectEpisode(1)" style="color: white;">Episode 1</button></li>
+                <li><button onclick="selectEpisode(2)" style="color: white;">Episode 2</button></li>
+                <li><button onclick="selectEpisode(3)" style="color: white;">Episode 3</button></li>
+                <li><button onclick="selectEpisode(4)" style="color: white;">Episode 4</button></li>
+                <li><button onclick="selectEpisode(5)" style="color: white;">Episode 5</button></li>
+                <li><button onclick="selectEpisode(6)" style="color: white;">Episode 6</button></li>
+                <li><button onclick="selectEpisode(7)" style="color: white;">Episode 7</button></li>
+                <li><button onclick="selectEpisode(8)" style="color: white;">Episode 8</button></li>
+                <li><button onclick="selectEpisode(9)" style="color: white;">Episode 9</button></li>
+                <li><button onclick="selectEpisode(10)" style="color: white;">Episode 10</button></li>
+                <li><button onclick="selectEpisode(11)" style="color: white;">Episode 11</button></li>
+                <li><button onclick="selectEpisode(12)" style="color: white;">Episode 12</button></li>
+            </ul>
+        </div>
+    
+        <div class="chat-box" id="chatBox">
+            <h2>Chat Box</h2>
+            <div id="chatMessages"></div>
+            <form onsubmit="sendMessage(); return false;">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function selectEpisode(episodeNumber) {
+            console.log("Selected Episode " + episodeNumber);
+            // You can add your logic here to load the selected episode
+        }
+    
+        function sendMessage() {
+            var messageInput = document.getElementById("messageInput");
+            var message = messageInput.value.trim();
+            if (message !== "") {
+                var chatMessages = document.getElementById("chatMessages");
+                var newMessage = document.createElement("div");
+                newMessage.classList.add("chat-message");
+                newMessage.innerHTML = "<span>User 1:</span> " + message;
+                chatMessages.appendChild(newMessage);
+                messageInput.value = "";
+    
+                // Simulate other users' responses
+                setTimeout(function() {
+                    var responseMessage = document.createElement("div");
+                    responseMessage.classList.add("chat-message");
+                    responseMessage.innerHTML = "<span>User 2:</span> This episode was awesome!";
+                    chatMessages.appendChild(responseMessage);
+                }, 1000);
+    
+                setTimeout(function() {
+                    var responseMessage = document.createElement("div");
+                    responseMessage.classList.add("chat-message");
+                    responseMessage.innerHTML = "<span>User 3:</span> I can't wait for the next one!";
+                    chatMessages.appendChild(responseMessage);
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
